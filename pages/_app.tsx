@@ -1,10 +1,7 @@
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { Nunito } from '@next/font/google';
 import { Analytics } from '@vercel/analytics/react';
-
-const nunito = Nunito({ subsets: ['latin'] });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -57,7 +54,7 @@ export default function App({ Component, pageProps }: AppProps) {
           href='/appleIcons/apple-touch-icon-180x180.png'
         />
       </Head>
-      <main className={nunito.className}>
+      <main>
         <Component {...pageProps} />
         <Analytics />
       </main>
